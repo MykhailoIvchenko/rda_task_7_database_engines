@@ -23,8 +23,6 @@ CREATE TABLE ProductDescription (
 		Description VARCHAR(200),
 		ProductID INT,
 		CountryID INT,
-		FOREIGN KEY (ProductID) REFERENCES ProductDescription(ID) ON DELETE NO ACTION,
-		FOREIGN KEY (CountryID) REFERENCES Countries(ID) ON DELETE NO ACTION,
 		PRIMARY KEY (ID)
 ) ENGINE=MyISAM
 
@@ -40,5 +38,4 @@ CREATE TABLE ProductReporting (
 		Date DATE,
 		ProductName VARCHAR(50),
 		Orders INT,
-		PRIMARY KEY (Date)
 ) ENGINE=CSV
